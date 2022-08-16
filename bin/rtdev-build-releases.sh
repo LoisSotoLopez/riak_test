@@ -17,6 +17,7 @@
 # that should work too.
 : ${R16B02:=$HOME/.erlang_releases/R16B02-basho10-O2}
 : ${R203:=$HOME/.erlang_releases/20.3}
+: ${R223:=$HOME/.erlang_releases/22.3}
 
 # These are the default tags to use when building basho OTP releases.
 # Export different tags to get a different build. N.B. You will need to
@@ -24,6 +25,7 @@
 # possibly remove the directories above.
 : ${R16_TAG:="OTP_R16B02_basho10"}
 : ${R203_TAG:="20.3"}
+: ${R223_TAG:="22.3"}
 
 # By default the Open Source version of Riak will be used, but for internal
 # testing you can override this variable to use `riak_ee` instead
@@ -180,5 +182,5 @@ build()
 }
 
 #build "riak-2.2.8" $R16B02 riak-2.2.8
-build "riak-3.0" $R203 develop-3.0-ns
+build "riak-qriak" $R223 develop-3.0
 echo
